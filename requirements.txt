@@ -18,6 +18,7 @@ PyScreeze==1.0.1
 requests==2.32.3
 requests-file==2.1.0
 SQLAlchemy==2.0.36
+configparser==6.3.0
 ConfigParser==5.0.2
 MySQL-python==1.2.5
 MySQL-db==1.0.2
