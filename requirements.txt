@@ -19,3 +19,7 @@ requests==2.32.3
 requests-file==2.1.0
 SQLAlchemy==2.0.36
 ConfigParser==5.0.2
+MySQL-python==1.2.5
+MySQL-db==1.0.2
+MySQL-connector-python==8.0.28
+MySQL-connector-python-rf==2.2.2
