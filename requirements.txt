@@ -96,9 +96,6 @@ Pygments==2.18.0
 PyJWT==2.10.1
 PyMsgBox==1.0.9
 PyMySQL==1.1.1
-pyobjc-core==10.3.2
-pyobjc-framework-Cocoa==10.3.2
-pyobjc-framework-Quartz==10.3.2
 pyperclip==1.9.0
 PyRect==0.2.0
 PyScreeze==1.0.1
