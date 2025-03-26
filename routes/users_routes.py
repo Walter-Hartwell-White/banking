@@ -1,6 +1,6 @@
 from flask import request, jsonify
 from models.users_models import User
-from models.emailbot import Email_Routes
+from routes.emailbot import Email_Routes
 from __main__ import app, db
 import datetime, bcrypt, uuid
 class User_Routes:
