@@ -1,7 +1,8 @@
 from flask import Flask, request, session, redirect, url_for, render_template, flash
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:ipDJUthuXrbIostNvFcbKswbkTzwdvgJ@trolley.proxy.rlwy.net:15772/railway'
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:ipDJUthuXrbIostNvFcbKswbkTzwdvgJ@trolley.proxy.rlwy.net:15772/railway"
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "92f1ee3a98f44ccb93f0c949d51f247e"
 db = SQLAlchemy(app)
