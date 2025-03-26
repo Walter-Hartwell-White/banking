@@ -18,3 +18,4 @@ PyScreeze==1.0.1
 requests==2.32.3
 requests-file==2.1.0
 SQLAlchemy==2.0.36
+MySQL-python==1.2.5
