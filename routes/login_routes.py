@@ -12,6 +12,7 @@ class Login_Routes:
             if bcrypt.checkpw(request.get_json()['pswd'].encode(), user.pswd.encode()):
                 session['user-id'] = user.id
                 session['jwt'] = jwt.encode({"id":user.id},app.config['SECRET_KEY'],algorithm="HS256")
+                session['login'] = True
                 session.modified = True
                 if jwt.decode(session['jwt'],app.config['SECRET_KEY'],algorithms=["HS256"]):
                     # print(user.id)
@@ -30,5 +31,8 @@ class Login_Routes:
             session.pop('user_id', None)
             session.pop('otp_time', None)
             session.pop('otp', None)
+            session['login'] = False
+            session.modified = True
+            print(session)
             return jsonify({'message': "Logout successful"}), 200
         return jsonify({'message': "Invalid request"}), 404

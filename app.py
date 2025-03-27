@@ -1,8 +1,8 @@
 from flask import Flask, request, session, redirect, url_for, render_template, flash
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:ipDJUthuXrbIostNvFcbKswbkTzwdvgJ@trolley.proxy.rlwy.net:15772/railway"
-
+# app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:ipDJUthuXrbIostNvFcbKswbkTzwdvgJ@trolley.proxy.rlwy.net:15772/railway"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:Root-123@localhost/banking"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "92f1ee3a98f44ccb93f0c949d51f247e"
 db = SQLAlchemy(app)
@@ -82,6 +82,11 @@ def login():
 def logout():
     from routes.login_routes import Login_Routes
     return Login_Routes().Logout()
+
+@app.route("/transfer", methods = ["POST"])
+def transfer():
+    from routes.transactions_routes import Transaction_Routes
+    return Transaction_Routes().newtransaction()
 
 
 if __name__ == '__main__':
